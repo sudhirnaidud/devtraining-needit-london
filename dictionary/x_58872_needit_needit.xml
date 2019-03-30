@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="4" type="collection">
         <element attributes="edge_encryption_enabled=true" choice="1" label="New Choice" max_length="40" name="u_choice_2" type="string">
             <choice>
                 <element inactive_on_update="false" label="Choice 1" sequence="0" value="Choice 1"/>
@@ -16,27 +16,26 @@
         </element>
         <element label="New Date/Time" max_length="40" name="u_glide_date_time_3" type="glide_date_time"/>
         <element label="New Date/Time" max_length="40" name="u_glide_date_time_4" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" label="Other" max_length="40" name="u_other" type="string"/>
         <element label="New Reference" max_length="32" name="u_reference_1" reference="cmdb_ci_appl_dot_net" type="reference"/>
         <element label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
         <element attributes="edge_encryption_enabled=true" choice="1" default="legal" label="Request type" mandatory="true" max_length="40" name="u_request_type" type="string">
             <choice>
                 <element inactive_on_update="false" label="Human Resources" sequence="0" value="hr"/>
-                <element inactive="true" inactive_on_update="true" label="SD Team" sequence="0" value="sd team"/>
                 <element inactive_on_update="false" label="Facilities" sequence="1" value="facilities"/>
                 <element inactive_on_update="false" label="Legal" sequence="2" value="legal"/>
-                <element inactive_on_update="false" label="SD Desk" sequence="3" value="sddesk"/>
+                <element inactive_on_update="false" label="Other" sequence="3" value="other"/>
             </choice>
         </element>
         <element attributes="edge_encryption_enabled=true" choice="1" default="legal1" label="What needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
             <choice>
                 <element inactive_on_update="false" label="Human Resource 1" sequence="0" value="hr1"/>
-                <element inactive="true" inactive_on_update="true" label="Sd Desk 1" sequence="0" value="sddesk1"/>
                 <element inactive_on_update="false" label="Human Resource 2" sequence="1" value="hr2"/>
-                <element inactive="true" inactive_on_update="true" label="Sd Desk 2" sequence="1" value="sddesk2"/>
                 <element inactive_on_update="false" label="Facilities 1" sequence="2" value="facilities1"/>
                 <element inactive_on_update="false" label="Facilities 2" sequence="3" value="facilities2"/>
                 <element inactive_on_update="false" label="Legal 1" sequence="4" value="legal1"/>
                 <element inactive_on_update="false" label="Legal 2" sequence="5" value="legal2"/>
+                <element inactive_on_update="false" label="Other" sequence="6" value="other"/>
             </choice>
         </element>
         <element label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
